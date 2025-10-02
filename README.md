@@ -1,67 +1,55 @@
-Libft
+# Libft
 
-A Libft é a primeira biblioteca desenvolvida como projeto da 42. O objetivo é recriar um conjunto de funções básicas da linguagem C, além de implementar funções adicionais, que servirão de base para futuros projetos.
+O **Libft** é o primeiro projeto da 42. O objetivo é recriar funções da biblioteca padrão do C e desenvolver uma biblioteca própria que será reutilizada em diversos projetos ao longo da formação.
 
-📚 Objetivo do Projeto
+---
 
-Reimplementar funções da biblioteca padrão C (<string.h>, <stdlib.h>, etc.).
+## 🚀 Funcionalidades
 
-Criar novas funções utilitárias para manipulação de strings, memória e listas encadeadas.
+- Implementação de funções da **libc**:  
+  - Manipulação de memória (`memset`, `memcpy`, `memmove`, etc.)  
+  - Manipulação de strings (`strlen`, `strdup`, `strjoin`, etc.)  
+  - Conversão de caracteres e números (`atoi`, `toupper`, `tolower`, etc.)  
 
-Servir como fundação para todos os próximos projetos da 42.
+- Funções extras para facilitar o desenvolvimento:  
+  - Manipulação de listas encadeadas (`t_list`, `ft_lstnew`, `ft_lstadd_back`, etc.)  
+  - Funções auxiliares criadas do zero.  
 
-🛠️ Funcionalidades
-Funções da libc
+---
 
-ft_strlen, ft_strncmp, ft_strdup, ft_strchr, ft_strrchr, ft_strnstr
+## 📂 Estrutura
 
-ft_memset, ft_memcpy, ft_memmove, ft_memcmp, ft_memchr
+```bash
+Libft/
+├── libft.h        # Header com protótipos
+├── *.c            # Implementação das funções
+├── Makefile       # Automação da compilação
+└── README.md      # Documentação
+⚙️ Compilação
+Clone o repositório e use o Makefile:
 
-ft_atoi, ft_isalpha, ft_isdigit, ft_isalnum, ft_isascii, ft_isprint, ft_toupper, ft_tolower
-
-ft_calloc
-
-Funções adicionais
-
-Manipulação de strings (ft_substr, ft_strjoin, ft_strtrim, ft_split, ft_strmapi, ft_striteri)
-
-Manipulação de números (ft_itoa)
-
-Manipulação de memória e saída (ft_putchar_fd, ft_putstr_fd, ft_putendl_fd, ft_putnbr_fd)
-
-Bonus – Listas encadeadas (t_list)
-
-ft_lstnew, ft_lstadd_front, ft_lstsize, ft_lstlast, ft_lstadd_back
-
-ft_lstdelone, ft_lstclear, ft_lstiter, ft_lstmap
-
-⚙️ Como compilar
-
-Clone o repositório e use o comando:
-
+bash
+Copiar código
+git clone https://github.com/seu-usuario/libft.git
+cd libft
 make
+Isso gera o arquivo libft.a, que pode ser usado em outros projetos:
 
+bash
+Copiar código
+gcc main.c -L. -lft -I.
+✅ Testes
+Testadores recomendados:
 
-Isso irá gerar o arquivo libft.a, que pode ser utilizado para compilar outros programas em C:
+libft-unit-test
 
-gcc -Wall -Wextra -Werror main.c libft.a -o program
+libftTester
 
-✅ Normas
+🎯 Objetivo do Projeto
+Entender a fundo como funciona a libc
 
-Todas as funções seguem a Norminette (norma de código da 42).
+Ganhar experiência com manipulação de memória
 
-Máximo de 25 linhas por função (sem contar chaves).
+Aprender a estruturar bibliotecas reutilizáveis
 
-Arquivos organizados por tipo de função.
-
-📂 Estrutura do Projeto
-libft/
-├── Makefile
-├── libft.h
-├── ft_*.c
-
-🧑‍💻 Autor
-
-Projeto desenvolvido por Vinionix
- como parte do currículo da 42 Rio
-.
+Ter disciplina com as normas da 42
